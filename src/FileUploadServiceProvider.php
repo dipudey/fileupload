@@ -1,8 +1,7 @@
 <?php
 
-namespace Dipudey\Fileupload\Providers;
+namespace Dipudey\Fileupload;
 
-use Dipudey\Fileupload\FileUpload;
 use Illuminate\Support\ServiceProvider;
 
 class FileUploadServiceProvider extends ServiceProvider
