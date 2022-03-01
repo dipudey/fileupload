@@ -18,7 +18,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Dipudey\\Fileupload\\FileuploadServiceProvider"
+                "Dipudey\\Fileupload\\Providers\\FileuploadServiceProvider"
             ]
         }
     }
