@@ -1,0 +1,18 @@
+{
+    "name": "dipudey/fileupload",
+    "description": "Simple File Upload",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Dipudey\\Fileupload\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "dipudey",
+            "email": "dipudey764@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
