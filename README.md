@@ -2,12 +2,12 @@
 
 Laravel file uploader package
 
-###### Installation
+## Installation
 
 > composer require dipudey/fileupload
 
 
-###### Usage
+## Usage
 
 ```
 use Dipudey\Fileupload\FileUpload;
@@ -34,5 +34,5 @@ $path = FileUpload::file($request->file) // Normal file request store
         ->save();
 ```
 
-###### Security
+## Security
 If you find any security related issues, please email dipuchundradey@gmail.com instead of using the issue tracker.
