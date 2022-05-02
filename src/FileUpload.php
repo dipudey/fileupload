@@ -67,16 +67,9 @@ class FileUpload
         }
 
         if ($this->base64) {
-            Storage::disk('fileupload')->put($this->decodeBase64(), base64_decode(str_replace(' ', '+', str_replace(substr($this->base64, 0, strpos($this->base64, ',') + 1), '', $this->base64))));
-            return $this->decodeBase64();
+            $path = $this->getUploadDirectory() . "/" . uniqid() . "." . explode('/', explode(':', substr($this->base64, 0, strpos($this->base64, ';')))[1])[1];
+            Storage::disk('fileupload')->put($path, base64_decode(str_replace(' ', '+', str_replace(substr($this->base64, 0, strpos($this->base64, ',') + 1), '', $this->base64))));
+            return $path;
         }
-    }
-
-    private function decodeBase64()
-    {
-        if ($this->fileName) {
-            return $this->getUploadDirectory() . "/" . $this->fileName;
-        }
-        return $this->getUploadDirectory() . "/" . uniqid() . "." . explode('/', explode(':', substr($this->base64, 0, strpos($this->base64, ';')))[1])[1];;
     }
 }
